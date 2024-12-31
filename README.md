@@ -6,6 +6,7 @@ A simple blog application built with Flask that allows users to register, log in
 ## Key Features:
 - __Admin Privileges:__ Only admin users can create, edit, and delete posts.
 - __User Interaction:__ Regular users can comment on posts.
+- __Route Protection:__ Routes for creating, editing, and deleting posts are protected, ensuring only admins can access them and preventing privilege escalation via URL manipulation.
 - __Database Integration:__ Uses SQLite and SQLAlchemy for data storage.
   
 ## What I Learned:
