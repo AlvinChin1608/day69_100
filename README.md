@@ -13,3 +13,7 @@ A simple blog application built with Flask that allows users to register, log in
 - Built a blog app using Flask and SQLAlchemy.
 - Implemented user authentication and role-based access (admins vs. regular users).
 - Applied best practices for form validation and password hashing.
+
+### Admin privileges 
+Create, Edit and Delete posts
+![](https://github.com/AlvinChin1608/day69_100/blob/main/Admin_privileges-ezgif.com-video-to-gif-converter.gif)
