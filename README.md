@@ -17,3 +17,7 @@ A simple blog application built with Flask that allows users to register, log in
 ### Admin privileges 
 Create, Edit and Delete posts
 ![](https://github.com/AlvinChin1608/day69_100/blob/main/Admin_privileges-ezgif.com-video-to-gif-converter.gif)
+
+### Non-Admin users
+Only able to comment on posts
+![](https://github.com/AlvinChin1608/day69_100/blob/main/ScreenRecording2024-12-31at19.28.05-ezgif.com-video-to-gif-converter%20(1).gif)
