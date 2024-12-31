@@ -1,0 +1,54 @@
+{% from "bootstrap5/form.html" import render_form %} {% block content %} {%
+include "header.html" %}
+
+<!-- Page Header -->
+<header
+  class="masthead"
+  style="background-image: url('../static/assets/img/login-bg.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="page-heading">
+          <h1>Log In</h1>
+          <span class="subheading">Welcome Back!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Automatically hide flash messages after 3 seconds
+  setTimeout(() => {
+      const flashMessages = document.getElementById('flash-messages');
+      if (flashMessages) {
+          flashMessages.style.transition = 'opacity 0.5s ease';
+          flashMessages.style.opacity = '0'; // Fade out
+          setTimeout(() => flashMessages.remove(), 500); // Remove after fading
+      }
+  }, 3000); // 3 seconds
+</script>
+
+<main class="mb-4">
+  <div class="container">
+    <div class="row">
+      <!-- TODO: add a flash message here for users registering twice -->
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <!--TODO: render login form here-->
+        <div id="flash-messages">
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+                <p style="color: red;">{{ message }}</p>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+        </div>  
+        {{render_form(form, novalidate=True, button_map={"submit":"primary"})}}
+      </div>
+    </div>
+  </div>
+</main>
+
+{% include "footer.html" %} {% endblock %}
